@@ -23,11 +23,11 @@ const PRODUCTS = [
 ];
 
 const CATEGORIES = [
-    { id: 'running',  name: 'Running',  icon: '🏃', class: 'cat-running',         count: PRODUCTS.filter(p=>p.category==='running').length },
-    { id: 'casual',   name: 'Casual',   icon: '👟', class: 'cat-casual',          count: PRODUCTS.filter(p=>p.category==='casual').length },
-    { id: 'formal',   name: 'Formal',   icon: '👞', class: 'cat-formal',          count: PRODUCTS.filter(p=>p.category==='formal').length },
-    { id: 'mujer',    name: 'Mujer',    icon: '✨', class: 'cat-deportivo-mujer', count: PRODUCTS.filter(p=>p.category==='mujer').length },
-    { id: 'infantil', name: 'Niños',    icon: '⭐', class: 'cat-infantil',        count: PRODUCTS.filter(p=>p.category==='infantil').length },
+    { id: 'running',  name: 'Running',  icon: 'bi-activity',         class: 'cat-running',         count: PRODUCTS.filter(p=>p.category==='running').length },
+    { id: 'casual',   name: 'Casual',   icon: 'bi-person-walking',   class: 'cat-casual',          count: PRODUCTS.filter(p=>p.category==='casual').length },
+    { id: 'formal',   name: 'Formal',   icon: 'bi-briefcase',        class: 'cat-formal',          count: PRODUCTS.filter(p=>p.category==='formal').length },
+    { id: 'mujer',    name: 'Mujer',    icon: 'bi-stars',            class: 'cat-deportivo-mujer', count: PRODUCTS.filter(p=>p.category==='mujer').length },
+    { id: 'infantil', name: 'Niños',    icon: 'bi-balloon-heart',    class: 'cat-infantil',        count: PRODUCTS.filter(p=>p.category==='infantil').length },
 ];
 
 const BRANDS = [...new Set(PRODUCTS.map(p => p.brand))];
@@ -174,7 +174,7 @@ function renderSidebar(activeCategory = 'all', activeBrand = 'all') {
             </div>
             ${CATEGORIES.map(c => `
                 <div class="sidebar-link ${activeCategory===c.id?'active':''}" onclick="applyFilter('${c.id}','brand','${activeBrand}')">
-                    <span>${c.icon} ${c.name}</span>
+                    <span><i class="bi ${c.icon} me-1"></i> ${c.name}</span>
                     <span class="sidebar-badge">${c.count}</span>
                 </div>
             `).join('')}
@@ -303,7 +303,7 @@ function renderHome() {
                 <div class="cat-grid">
                     ${CATEGORIES.map(c => `
                         <div class="cat-card ${c.class}" onclick="navigate('category',{category:'${c.id}'})">
-                            <span class="cat-icon">${c.icon}</span>
+                            <i class="bi ${c.icon} cat-icon"></i>
                             <div class="cat-name">${c.name}</div>
                             <div class="cat-count">${c.count} modelos</div>
                         </div>
@@ -349,22 +349,22 @@ function renderHome() {
             <!-- FEATURES -->
             <div class="features-grid">
                 <div class="feature-card">
-                    <span class="feature-icon">🚀</span>
+                    <i class="bi bi-rocket-takeoff feature-icon"></i>
                     <div class="feature-title">Envío Rápido</div>
                     <p class="feature-desc">Entrega en 24-48 horas en todo el país. Gratis en pedidos mayores a $150.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🔄</span>
+                    <i class="bi bi-arrow-left-right feature-icon"></i>
                     <div class="feature-title">Cambios Fáciles</div>
                     <p class="feature-desc">30 días para cambios y devoluciones sin preguntas. Tu satisfacción es nuestra prioridad.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🛡️</span>
+                    <i class="bi bi-patch-check feature-icon"></i>
                     <div class="feature-title">Garantía</div>
                     <p class="feature-desc">Todos nuestros productos son 100% originales con garantía del fabricante.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">💳</span>
+                    <i class="bi bi-shield-lock feature-icon"></i>
                     <div class="feature-title">Pago Seguro</div>
                     <p class="feature-desc">Tarjeta, transferencia o contra entrega. Encriptación SSL en todas las transacciones.</p>
                 </div>

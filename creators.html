@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRYDE — Creadores</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <!-- STRYDE Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR (idéntico al de index.html)
+══════════════════════════════════════════════ -->
+<nav class="navbar navbar-stryde navbar-expand-lg">
+    <div class="container-fluid px-4">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html" style="cursor:pointer">
+            STR<span>Y</span>DE
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+            style="color:rgba(245,242,238,.7)">
+            <i class="bi bi-list" style="font-size:1.5rem"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <!-- Nav links -->
+            <ul class="navbar-nav mx-auto gap-1">
+                <li class="nav-item">
+                    <a class="nav-link-stryde" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link-stryde" href="index.html#categorias">Categorías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link-stryde" href="index.html#busqueda">Búsqueda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link-stryde active" href="creators.html">Creadores</a>
+                </li>
+            </ul>
+
+            <!-- Search + Cart -->
+            <div class="d-flex align-items-center gap-3">
+                <!-- Search -->
+                <div class="navbar-search" style="position:relative">
+                    <input type="text" id="nav-search-input" placeholder="Buscar zapatos...">
+                    <i class="bi bi-search search-icon"></i>
+                    <div id="search-dropdown" class="search-dropdown"></div>
+                </div>
+
+                <!-- Cart -->
+                <a class="cart-btn" href="index.html#carrito">
+                    <i class="bi bi-bag"></i>
+                    Carrito
+                    <span class="cart-count" id="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="creators-hero">
+    <div class="hero-bg-mesh"></div>
+    <div class="hero-lines"></div>
+    <span class="hero-eyebrow">El equipo detrás del proyecto</span>
+    <h1 class="hero-title">CREA<span>DO</span>RES</h1>
+    <p class="hero-subtitle">Dos estudiantes de Ingeniería en Sistemas de la Universidad Nacional de Costa Rica que construyeron STRYDE desde cero.</p>
+</section>
+
+<div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-label">MEET THE TEAM</span>
+    <div class="divider-line"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     CREATORS
+══════════════════════════════════════════════ -->
+<section class="creators-section">
+    <div class="creators-grid">
+
+        <!-- ── RANDALL ── -->
+        <div class="creator-card">
+            <div class="card-strip"></div>
+            <div class="card-header">
+                <div class="avatar-wrap">
+                    <img class="avatar" id="avatar-randall" src="" alt="Randall Alvarez">
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="card-identity">
+                    <div class="creator-role">Backend Developer</div>
+                    <div class="creator-name">Randall Alvarez</div>
+                    <div class="creator-handle">
+                        <i class="bi bi-github"></i>@Ogiwara-unu
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="una-badge">
+                    <i class="bi bi-mortarboard"></i>
+                    Ingeniería en Sistemas — UNA Costa Rica
+                </div>
+                <p class="creator-bio">
+                    Estudiante apasionado por el desarrollo backend, las bases de datos y las pruebas de código. Vive en Guanacaste, Costa Rica. Siempre buscando aprender nuevas tecnologías y mejorar sus habilidades como desarrollador.
+                </p>
+
+                <div class="tech-tags">
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Oracle DB</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Angular</span>
+                </div>
+
+                <div class="creator-stats">
+                    <div class="stat">
+                        <div class="stat-num" id="repos-randall">—</div>
+                        <div class="stat-label">Repos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" id="followers-randall">—</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" id="following-randall">—</div>
+                        <div class="stat-label">Siguiendo</div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a class="social-link github" href="https://github.com/Ogiwara-unu" target="_blank">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a class="social-link linkedin" href="https://www.linkedin.com/in/randallalv" target="_blank">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                    <a class="social-link portfolio" href="https://randallalv-portfolio.netlify.app/" target="_blank">
+                        <i class="bi bi-box-arrow-up-right"></i> Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-mini">
+                <div class="projects-label">Proyectos destacados</div>
+                <div class="project-pills">
+                    <a class="project-pill" href="https://github.com/Ogiwara-unu/OkaryMsc" target="_blank">
+                        <span class="project-pill-name">OkaryMsc</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot ts"></span> TypeScript
+                        </span>
+                    </a>
+                    <a class="project-pill" href="https://github.com/Ogiwara-unu/SafeSteps" target="_blank">
+                        <span class="project-pill-name">SafeSteps</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot ts"></span> TypeScript · Ionic
+                        </span>
+                    </a>
+                    <a class="project-pill" href="https://github.com/Ogiwara-unu/rent-spa" target="_blank">
+                        <span class="project-pill-name">rent-spa</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot ts"></span> TypeScript
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── LELANY ── -->
+        <div class="creator-card">
+            <div class="card-strip"></div>
+            <div class="card-header">
+                <div class="avatar-wrap">
+                    <img class="avatar" id="avatar-lelany" src="" alt="Lelany Fernández">
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="card-identity">
+                    <div class="creator-role">Frontend Developer</div>
+                    <div class="creator-name">Lelany Fernández</div>
+                    <div class="creator-handle">
+                        <i class="bi bi-github"></i>@ValeeFernandez
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="una-badge">
+                    <i class="bi bi-mortarboard"></i>
+                    Ingeniería en Sistemas — UNA Costa Rica
+                </div>
+                <p class="creator-bio">
+                    Apasionada por el desarrollo frontend, el diseño de interfaces y la experiencia de usuario. Oriunda de Guanacaste, Costa Rica. Se especializa en construir y depurar experiencias visuales encantadoras con atención al detalle.
+                </p>
+
+                <div class="tech-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">Ionic</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Figma</span>
+                </div>
+
+                <div class="creator-stats">
+                    <div class="stat">
+                        <div class="stat-num" id="repos-lelany">—</div>
+                        <div class="stat-label">Repos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" id="followers-lelany">—</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" id="following-lelany">—</div>
+                        <div class="stat-label">Siguiendo</div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a class="social-link github" href="https://github.com/ValeeFernandez" target="_blank">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a class="social-link linkedin" href="https://www.linkedin.com/in/lelanyfernandezcarvajal/" target="_blank">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                    <a class="social-link portfolio" href="https://lelanyfdez-portfolio.netlify.app/" target="_blank">
+                        <i class="bi bi-box-arrow-up-right"></i> Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-mini">
+                <div class="projects-label">Proyectos destacados</div>
+                <div class="project-pills">
+                    <a class="project-pill" href="https://github.com/ValeeFernandez/Vale-s-Closet" target="_blank">
+                        <span class="project-pill-name">Vale's Closet</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot css"></span> CSS
+                        </span>
+                    </a>
+                    <a class="project-pill" href="https://github.com/ValeeFernandez/renta_api" target="_blank">
+                        <span class="project-pill-name">renta_api</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot php"></span> PHP
+                        </span>
+                    </a>
+                    <a class="project-pill" href="https://github.com/ValeeFernandez/rent-spa" target="_blank">
+                        <span class="project-pill-name">rent-spa</span>
+                        <span class="project-pill-lang">
+                            <span class="lang-dot ts"></span> TypeScript
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TEAM BANNER -->
+    <div class="team-banner">
+        <div class="team-banner-text">
+            <h3>Un proyecto <span>compartido</span></h3>
+            <p>STRYDE fue desarrollado como proyecto académico en la Universidad Nacional de Costa Rica. Código abierto, construido con pasión.</p>
+        </div>
+        <div class="team-banner-cta">
+            <a class="btn-primary-stryde" href="https://github.com/Ogiwara-unu/Styde-HTML.git" target="_blank">
+                <i class="bi bi-github"></i> Ver en GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER (idéntico al de index.html)
+══════════════════════════════════════════════ -->
+<footer class="footer-stryde">
+    <div class="container-fluid px-4">
+        <div class="row g-4 mb-2">
+
+            <!-- Brand col -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">STR<span>Y</span>DE</div>
+                <p class="footer-tagline">Dark luxury sneaker store — UNA Costa Rica</p>
+                <p style="font-size:.82rem;color:rgba(245,242,238,.4);max-width:280px;line-height:1.6;">
+                    Tu destino para el calzado premium. Curado con pasión, entregado con estilo.
+                </p>
+            </div>
+
+            <!-- Tienda -->
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-heading">Tienda</div>
+                <a class="footer-link" href="index.html">Inicio</a>
+                <a class="footer-link" href="index.html#categorias">Categorías</a>
+                <a class="footer-link" href="index.html#nuevos">Nuevos Lanzamientos</a>
+                <a class="footer-link" href="index.html#ofertas">Ofertas</a>
+            </div>
+
+            <!-- Soporte -->
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-heading">Soporte</div>
+                <a class="footer-link" href="#">Centro de Ayuda</a>
+                <a class="footer-link" href="#">Guía de Tallas</a>
+                <a class="footer-link" href="#">Envíos</a>
+                <a class="footer-link" href="#">Devoluciones</a>
+            </div>
+
+            <!-- Proyecto -->
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-heading">Proyecto</div>
+                <a class="footer-link" href="creators.html">Creadores</a>
+                <a class="footer-link" href="https://github.com/Ogiwara-unu" target="_blank">GitHub</a>
+                <a class="footer-link" href="#">Acerca de STRYDE</a>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-heading">Contacto</div>
+                <a class="footer-link" href="https://www.linkedin.com/in/randallalv" target="_blank">LinkedIn — Randall</a>
+                <a class="footer-link" href="https://www.linkedin.com/in/lelanyfernandezcarvajal/" target="_blank">LinkedIn — Lelany</a>
+                <a class="footer-link" href="https://randallalv-portfolio.netlify.app/" target="_blank">Portfolio</a>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2025 STRYDE — Desarrollado por Randall Alvarez &amp; Lelany Fernández · UNA Costa Rica</span>
+            <div class="footer-socials">
+                <a class="social-btn" href="https://github.com/Ogiwara-unu" target="_blank" title="GitHub Randall">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a class="social-btn" href="https://github.com/ValeeFernandez" target="_blank" title="GitHub Lelany">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a class="social-btn" href="https://www.linkedin.com/in/randallalv" target="_blank" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a class="social-btn" href="https://randallalv-portfolio.netlify.app/" target="_blank" title="Portfolio">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    /* ── GitHub data loader ── */
+    const creators = [
+        {
+            username: 'Ogiwara-unu',
+            imgId: 'avatar-randall',
+            reposId: 'repos-randall',
+            followersId: 'followers-randall',
+            followingId: 'following-randall',
+        },
+        {
+            username: 'ValeeFernandez',
+            imgId: 'avatar-lelany',
+            reposId: 'repos-lelany',
+            followersId: 'followers-lelany',
+            followingId: 'following-lelany',
+        },
+    ];
+
+    async function loadGitHubData() {
+        for (const creator of creators) {
+            try {
+                const res = await fetch(`https://api.github.com/users/${creator.username}`);
+                const data = await res.json();
+
+                const img = document.getElementById(creator.imgId);
+                if (img && data.avatar_url) img.src = data.avatar_url;
+
+                const repos = document.getElementById(creator.reposId);
+                if (repos) repos.textContent = data.public_repos ?? '—';
+
+                const followers = document.getElementById(creator.followersId);
+                if (followers) followers.textContent = data.followers ?? '—';
+
+                const following = document.getElementById(creator.followingId);
+                if (following) following.textContent = data.following ?? '—';
+
+            } catch (err) {
+                console.warn(`No se pudo cargar el perfil de ${creator.username}`, err);
+            }
+        }
+    }
+
+    loadGitHubData();
+
+    /* ── Sync cart badge from localStorage (si script.js lo usa) ── */
+    try {
+        const cart = JSON.parse(localStorage.getItem('stryde-cart') || '[]');
+        const total = cart.reduce((s, i) => s + (i.qty || 1), 0);
+        const badge = document.getElementById('cart-badge');
+        if (badge && total > 0) badge.textContent = total;
+    } catch (_) {}
+</script>
+
+</body>
+</html>
